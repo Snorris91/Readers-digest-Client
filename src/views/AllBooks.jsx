@@ -20,8 +20,8 @@ export const AllBooks = () => {
             <div className="books-container">
         {books.map((book) => {
           return (
-            <div key={book.id} className="book-card">
-              <img src={book.cover_image} alt={book.name} className="book-img w-72 h-96" />
+            <div key={book.id} className="book-card my-2">
+              <img src={book.cover_image} alt={book.name} className="book-img w-64 h-80" />
               <div className="book-name">
                 <i>{book.title}</i>
               </div>

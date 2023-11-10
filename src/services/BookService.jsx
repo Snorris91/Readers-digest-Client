@@ -16,3 +16,12 @@ export const postNewBook = (book) => {
           body: JSON.stringify(book),
     })
 }
+
+export const getBookByBookId = (book) => {
+    return fetch(`http://localhost:8000/books/${book}`, 
+    {
+        headers: {
+            Authorization: `Token ${JSON.parse(localStorage.getItem("token")).token}`
+        }
+    }).then(res => res.json())
+}

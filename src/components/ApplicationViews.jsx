@@ -27,8 +27,8 @@ export const ApplicationViews = () => {
             <Route element={<Authorized />}>
             <Route index element={<Home />}/>
                 <Route path="/allBooks">
-                <Route index element={<AllBooks />}/>
-                <Route path=":bookId" element={<BookDetails />}/>
+                <Route index element={<AllBooks currentUser={currentUser}/>}/>
+                <Route path=":bookId" element={<BookDetails currentUser={currentUser}/>}/>
                 <Route path=":bookId/addReview" element={<AddReview  currentUser={currentUser}/>}/>
             </Route>
             <Route path="/create" element={<AddBooks />} />
